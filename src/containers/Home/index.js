@@ -24,8 +24,10 @@ function App() {
   const inputName = useRef();
   const inputOrder = useRef();
 
+  const minhaUrl = "https://api-register-order.vercel.app"
+
   async function addNewUser() {
-    const { data: newUser } = await axios.post("https://api-register-order.vercel.app",
+    const { data: newUser } = await axios.post(`${minhaUrl}/order`,
       {
         order: inputOrder.current.value,
         name: inputName.current.value,
