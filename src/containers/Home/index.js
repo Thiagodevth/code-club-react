@@ -24,7 +24,7 @@ function App() {
   const inputName = useRef();
   const inputOrder = useRef();
 
-  const minhaUrl = "https://api-register-order.vercel.app"
+  const minhaUrl = "https://code-club-node.vercel.app/"
 
   async function addNewUser() {
     const { data: newUser } = await axios.post(`${minhaUrl}/order`,
