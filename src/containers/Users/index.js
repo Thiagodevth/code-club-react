@@ -34,7 +34,7 @@ function Users() {
   }, [users])
 
   async function deleteUser(userId) {
-    await axios.delete(`https://api-register-order.vercel.app${userId}`)
+    await axios.delete(`https://api-register-order.vercel.app/${userId}`)
     const newUsers = users.filter((user) => user.id == userId);
     setUsers(newUsers);
   }
