@@ -23,7 +23,7 @@ function Users() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
-  const minhaUrl = "https://code-club-node.vercel.app/"
+  const minhaUrl = "https://code-club-node.vercel.app"
 
 
 
