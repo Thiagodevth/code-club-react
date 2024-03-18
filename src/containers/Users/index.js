@@ -23,10 +23,13 @@ function Users() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
+  const minhaUrl = "https://api-register-order.vercel.app"
+
+
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: newUser } = await axios.get("https://api-register-order.vercel.app");
+      const { data: newUser } = await axios.get(`${minhaUrl}`);
 
       setUsers(newUser);
     }
@@ -34,7 +37,7 @@ function Users() {
   }, [users])
 
   async function deleteUser(userId) {
-    await axios.delete(`https://api-register-order.vercel.app/${userId}`)
+    await axios.delete(`${minhaUrl}/order/${userId}`)
     const newUsers = users.filter((user) => user.id == userId);
     setUsers(newUsers);
   }
