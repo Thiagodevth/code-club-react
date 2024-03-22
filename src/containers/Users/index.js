@@ -29,7 +29,7 @@ function Users() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: newUser } = await axios.get(`${minhaUrl}´/order`);
+      const { data: newUser } = await axios.get(`${minhaUrl}/order`);
 
       setUsers(newUser);
     }
